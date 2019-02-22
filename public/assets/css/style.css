@@ -1,0 +1,131 @@
+/* Contact Form Styling */
+* {
+    box-sizing: border-box;
+}
+.mb-4 {
+    width: 960px;
+    margin: auto;
+}
+.h2, h2 {
+    font-size: 2rem;
+    margin-top: -60px;
+    color: green;
+}
+/* Hero Jumbotron */
+.jumbotron{
+    background-image: url('../images/hero_background_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+
+}
+.display-4, h3 {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+/* Search Box */
+.search_area {
+    position: relative;
+    bottom: 252px;
+}
+form.form-inline {
+    margin: auto;
+}
+
+button.btn.btn-outline-success.my-2.my-sm-0 {
+    background-color: white;
+    color: #108014;
+}
+button.btn.btn-outline-success.my-2.my-sm-0:hover{
+    background-color: #108014;
+    color: white;
+}
+
+/* Carousel Images */
+.carousel-inner {
+    max-height: 300px;
+    min-width: auto;
+  }
+
+  /* Cards Area */
+.welcome_area {
+    /*! display: inline-flex; 
+    width: 960px;*/
+    margin: 20px auto;
+}
+.card_3 {
+    /*! position: relative; */
+    /*! left: 42%; */
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+.card_2 {
+    /*! position: relative; */
+    /*! left: 25%; */
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+.card_2 .card-img-top {
+    transform: rotate(-30deg);
+}
+.card_1 {
+    /*! position: relative; */
+    /*! left: 9%; */
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+.card-body {
+    text-align: justify;
+}
+.card-img-top {
+    width: 250px;
+}
+#search_results {
+    margin-bottom: 75px;
+}
+.footer {
+    clear: both;
+    background-color: #000;
+}
+.container {
+    max-width: 100%;
+}
+.nav {
+    background-color: #000;
+    padding: 15px;
+}
+/* Reviews Page */
+.reviewstable {
+    width: 100%;
+}
+td.name {
+    width: 5%;
+    text-align: left;
+    font-size: 20px;
+}
+td.email {
+    width: 5%;
+    text-align: right;
+    font-size: 20px;
+}
+td.age {
+    width: 5%;
+    font-size: 20px;
+    text-align: center;
+}
+td.comment {
+    width: 20%;
+    padding: 7px 7px 5px 9px;
+    font-style: oblique;
+}
+.wocs {
+    margin-top: 50px;
+    text-align: center;
+}
+#reviewsBanner {
+    width: 100%;
+}

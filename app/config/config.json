@@ -15,14 +15,6 @@
       "port": 8889,
       "dialect": "mysql"
     },
-    "production": {
-      "username": "root",
-      "password": null,
-      "database": "user1_production",
-      "host": "127.0.0.1",
-      "port": 8889,
-      "dialect": "mysql"
-    },
     "JawsDB": {
       "username": "ci554eohb6hg079b",
       "password": "zbv44wimvq71oiys",

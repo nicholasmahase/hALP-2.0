@@ -15,7 +15,7 @@
       "port": 8889,
       "dialect": "mysql"
     },
-    "JawsDB": {
+    "production": {
       "username": "ci554eohb6hg079b",
       "password": "zbv44wimvq71oiys",
       "database": "jubwtpfejd32y48f",

@@ -22,6 +22,14 @@
       "host": "127.0.0.1",
       "port": 8889,
       "dialect": "mysql"
+    },
+    "JawsDB": {
+      "username": "ci554eohb6hg079b",
+      "password": "zbv44wimvq71oiys",
+      "database": "jubwtpfejd32y48f",
+      "host": "ixqxr3ajmyapuwmi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+      "port": 3306,
+      "dialect": "mysql"
     }
   }
   

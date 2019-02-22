@@ -2,7 +2,7 @@
     "development": {
       "username": "root",
       "password": "root",
-      "database": "user",
+      "database": "user1",
       "host": "127.0.0.1",
       "port": 8889,
       "dialect": "mysql"
@@ -10,7 +10,7 @@
     "test": {
       "username": "root",
       "password": null,
-      "database": "user_test",
+      "database": "user1_test",
       "host": "127.0.0.1",
       "port": 8889,
       "dialect": "mysql"
@@ -18,7 +18,7 @@
     "production": {
       "username": "root",
       "password": null,
-      "database": "user_production",
+      "database": "user1_production",
       "host": "127.0.0.1",
       "port": 8889,
       "dialect": "mysql"

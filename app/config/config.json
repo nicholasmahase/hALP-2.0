@@ -28,7 +28,7 @@
       "password": "zbv44wimvq71oiys",
       "database": "jubwtpfejd32y48f",
       "host": "ixqxr3ajmyapuwmi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-      "port": 8889,
+      "port": 3306,
       "dialect": "mysql"
     }
   }

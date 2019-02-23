@@ -17,7 +17,19 @@ app.use(
 ); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
-app.use(express.static("routes"));
+app.use(function(req, res, next) {
+	// if the url is "signin" then proceed to that route
+	// we need this because otherwise we'd run into an infinite loop
+	// of redirecting to the /signin page over and over
+	if(req.url.indexOf('/signin') >= 0) return next();
+
+	// if the user is authenticated, allow everything
+	if (req.isAuthenticated()) return next();
+
+	// for everything else, redirect to the signin route
+	res.redirect("/signin");
+});
+app.use(express.static("public"));
 //For Handlebars
 app.set("views", "./app/views");
 app.engine(
@@ -28,9 +40,6 @@ app.engine(
 );
 app.set("view engine", ".hbs");
 
-app.get("/", function(req, res) {
-  res.send("Welcome to Passport with Sequelize");
-});
 
 //Models
 var models = require("./app/models");

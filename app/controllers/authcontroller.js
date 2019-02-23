@@ -1,22 +1,22 @@
 var exports = (module.exports = {});
 
 exports.signup = function(req, res) {
-  res.render("signup.html");
+  res.render("signup");
 };
 
 exports.signin = function(req, res) {
   if (req.isAuthenticated()) {
-    res.render("index.html");
+    res.render("dashboard");
   } else {
-    res.render("signin.html");
+    res.render("signin");
   }
 };
 
 exports.dashboard = function(req, res) {
   if (req.isAuthenticated()) {
-    res.render("index.html");
+    res.render("dashboard");
   } else {
-    res.render("signin.html");
+    res.render("signin");
   }
 };
 

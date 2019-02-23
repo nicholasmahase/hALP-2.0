@@ -10,16 +10,16 @@ module.exports = function(sequelize, Sequelize) {
  
         firstname: {
             type: Sequelize.STRING,
-            allowNull: false
+            notEmpty: true
         },
  
         lastname: {
             type: Sequelize.STRING,
-            allowNull: false
+            notEmpty: true
         },
- 
         username: {
-            type: Sequelize.TEXT
+            type: Sequelize.STRING,
+            allowNull: false
         },
         email: {
             type: Sequelize.STRING,
@@ -40,14 +40,7 @@ module.exports = function(sequelize, Sequelize) {
         }
  
  
-    });
-    User.associate = function(models) {
-        // Associating User with Searches
-        // When an User is deleted, also delete any associated Searches
-        User.hasMany(models.Search, {
-          onDelete: "cascade"
-        });
-      };    
+    });   
  
     return User;
     };

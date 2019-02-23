@@ -1,7 +1,18 @@
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyDVPAHzPuMJJbOl2uK9uXNx2jF41V_bVNE",
+    authDomain: "myfullstackproject.firebaseapp.com",
+    databaseURL: "https://myfullstackproject.firebaseio.com",
+    projectId: "myfullstackproject",
+    storageBucket: "myfullstackproject.appspot.com",
+    messagingSenderId: "324837953357"
+};
+firebase.initializeApp(config);
+
 $(document).ready(function () {
 
     // Create a variable to reference the database
-    var exports = (module.exports = {});
+    var database = firebase.database();
 
     // snapshot of data to send to firebase
     $("#searchHalal").on("click", function(event){
@@ -12,7 +23,7 @@ $(document).ready(function () {
 
     console.log(searchedFood);
 
-    exports.ref("searchFormInfo").push({
+    database.ref("searchFormInfo").push({
         searchedFood: searchedFood
     });
 

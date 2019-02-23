@@ -17,7 +17,7 @@ app.use(
 ); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
-app.use(express.static("public"));
+app.use(express.static("routes"));
 //For Handlebars
 app.set("views", "./app/views");
 app.engine(

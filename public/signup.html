@@ -14,61 +14,48 @@
         padding: 0 200px 15px 0;
         border-bottom: 1px solid #E5E5E5;
     }
-	.bs-example{
+	.signup-form{
     	margin: 20px;
     }
 </style>
 </head>
 <body>
-<div class="bs-example">
-    <h1>Sign Up</h1>
-    <form class="form-horizontal" action="/signup" method="post">
+
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+          <div class="card">
+            <div class="card-header">
+              <h3>Sign Up</h3>
+            </div>  
+		<p>Please fill in this form to create an account!</p>
+		<hr>
         <div class="form-group">
-            <label class="control-label col-xs-3" for="firstName">First Name:</label>
-            <div class="col-xs-9">
-                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
-            </div>
+			<div class="row">
+				<div class="col-xs-6"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+				<div class="col-xs-6"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+			</div>        	
         </div>
         <div class="form-group">
-            <label class="control-label col-xs-3" for="lastName">Last Name:</label>
-            <div class="col-xs-9">
-                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-xs-3" for="lastName">Username:</label>
-            <div class="col-xs-9">
-                <input type="text" class="form-control" id="lastName" placeholder="Username" required>
-            </div>
+        	<input type="email" class="form-control" name="email" placeholder="Email" required="required">
         </div>
 		<div class="form-group">
-            <label class="control-label col-xs-3" for="inputEmail">Email Address:</label>
-            <div class="col-xs-9">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email Address" required>
-            </div>
+            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
         </div>
-        <div class="form-group">
-            <div class="col-xs-offset-3 col-xs-9">
-                <label class="checkbox-inline">
-                    <input type="checkbox" value="news"> Send me latest news and updates.
-                </label>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-xs-offset-3 col-xs-9">
-                <label class="checkbox-inline">
-                    <input type="checkbox" value="agree">  I agree to the <a href="#">Terms and Conditions</a>.
-                </label>
-            </div>
-        </div>
-        <br>
-        <div class="form-group">
-            <div class="col-xs-offset-3 col-xs-9">
-                <input type="submit" class="btn btn-primary" value="Submit">
-                <input type="reset" class="btn btn-default" value="Reset">
-            </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+        </div>        
+		<div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
         </div>
     </form>
+
 </div>
+<div class="card-footer">
+    <div class="d-flex justify-content-center links">
+	<div class="hint-text">Already have an account? <a href="/signin">Login here</a></div>
+</div>
+</div>
+</div>
+
 </body>
 </html>                            

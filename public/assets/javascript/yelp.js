@@ -1,6 +1,7 @@
 $(document).ready(function () {
     // Create a variable to reference the database
-    var database = firebase.database();
+    var exports = (module.exports = {});
+
 
     // snapshot of data to send to firebase
     $("#searchHalal").on("click", function(event){
@@ -11,7 +12,7 @@ $(document).ready(function () {
 
     console.log('halal ' + searchedFood);
 
-    database.ref("searchFormInfo").push({
+    exports.ref("searchFormInfo").push({
         searchedFood: searchedFood
     });
 

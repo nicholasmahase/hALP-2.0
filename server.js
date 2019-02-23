@@ -27,7 +27,7 @@ app.use(function(req, res, next) {
 	if (req.isAuthenticated()) return next();
 
 	// for everything else, redirect to the signin route
-	res.redirect("/signin");
+	res.redirect("/signup");
 });
 app.use(express.static("public"));
 //For Handlebars

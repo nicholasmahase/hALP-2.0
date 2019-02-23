@@ -10,38 +10,30 @@ module.exports = function(sequelize, Sequelize) {
  
         firstname: {
             type: Sequelize.STRING,
-            notEmpty: true
+            allowNull: false
         },
  
         lastname: {
             type: Sequelize.STRING,
-            notEmpty: true
+            allowNull: false
         },
  
         username: {
             type: Sequelize.TEXT
         },
- 
-        about: {
-            type: Sequelize.TEXT
-        },
- 
         email: {
             type: Sequelize.STRING,
             validate: {
                 isEmail: true
             }
         },
- 
         password: {
             type: Sequelize.STRING,
             allowNull: false
         },
- 
         last_login: {
             type: Sequelize.DATE
         },
- 
         status: {
             type: Sequelize.ENUM('active', 'inactive'),
             defaultValue: 'active'
@@ -49,29 +41,13 @@ module.exports = function(sequelize, Sequelize) {
  
  
     });
-    
+    User.associate = function(models) {
+        // Associating User with Searches
+        // When an User is deleted, also delete any associated Searches
+        User.hasMany(models.Search, {
+          onDelete: "cascade"
+        });
+      };    
  
     return User;
-    
-    var Search = sequelize.define('search', {
- 
-        id: {
-            autoIncrement: true,
-            primaryKey: true,
-            type: Sequelize.INTEGER
-        },
- 
-        search: {
-            type: Sequelize.STRING,
-            notEmpty: true
-        },
- 
-        location: {
-            type: Sequelize.STRING,
-            notEmpty: false
-        },
- 
-    });
- 
-    return Search;
-}
+    };

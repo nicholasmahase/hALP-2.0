@@ -22,12 +22,12 @@ app.use(function(req, res, next) {
 	// we need this because otherwise we'd run into an infinite loop
 	// of redirecting to the /signin page over and over
 	if(req.url.indexOf('/signin') >= 0) return next();
-
+  if(req.url.indexOf('/signup') >= 0) return next();
 	// if the user is authenticated, allow everything
 	if (req.isAuthenticated()) return next();
 
 	// for everything else, redirect to the signin route
-	res.redirect("/signup");
+	res.redirect("/signin");
 });
 app.use(express.static("public"));
 //For Handlebars
